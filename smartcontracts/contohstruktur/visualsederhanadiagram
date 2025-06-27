@@ -1,0 +1,8 @@
+[NFT onchain]
+   | (metadata JSON)
+   v
+Viewer <--- fetch image / HTML / JS / Google Sheet
+   |
+[user input] --onInput--> [Smart Contract] (store action/event)
+   ^                           |
+   |---------------------------| (history/isi/hasil tersimpan abadi)
