@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Kanvas NFT Modular Interaktif</title>
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+    <style>
+        body { font-family: sans-serif; max-width: 480px; margin: 30px auto; background: #f4f8fa; }
+        .canvas { border: 2px dashed #aaa; padding: 32px; background: #fff; margin-bottom: 14px;}
+        .messages { margin-bottom: 10px; min-height: 50px; }
+        .chatbox { display: flex; gap: 5px; }
+        input[type=text] { flex: 1; padding: 6px; border: 1px solid #bbb; border-radius: 4px;}
+        button { padding: 6px 16px; border: none; background: #5B7FFF; color: #fff; border-radius: 4px;}
+        .nft-image { max-width: 100%; }
+    </style>
+</head>
+<body>
+  <h2>Kanvas Putih NFT (Interaktif)</h2>
+  <div class="canvas">
+    <img id="nftimg" src="" alt="NFT Canvas" class="nft-image" />
+    <div id="messages" class="messages"></div>
+    <div class="chatbox">
+      <input id="msginput" type="text" placeholder="Tulis pesan / goresan..." />
+      <button onclick="addMessage()">Kirim</button>
+    </div>
+  </div>
+  <div id="info"></div>
+<script src="app.js"></script>
+</body>
+</html>
