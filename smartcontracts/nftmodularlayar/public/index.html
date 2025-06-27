@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Viewer NFT Modular</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+    <style>
+      body {font-family: sans-serif; max-width:500px; margin:40px auto;}
+      .canvas{border:2px dashed #bbb;background:#fff;padding:24px; margin-bottom:1rem;}
+      .nft-image{max-width:100%; margin-bottom:18px;}
+      .module-section{margin-top:18px;}
+    </style>
+</head>
+<body>
+  <h2>NFT Modular Viewer</h2>
+  <div class="canvas">
+    <img id="nftimg" src="" alt="NFT Canvas" class="nft-image">
+    <div id="dynamic-module"></div>
+  </div>
+  <div id="dataaktif"></div>
+  <div id="messages"></div>
+  <div class="module-section" id="custom-html"></div>
+  <div class="module-section" id="chatbox"></div>
+  <small id="infotxt"></small>
+  <script src="app.js"></script>
+</body>
+</html>
