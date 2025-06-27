@@ -1,0 +1,28 @@
+{
+  "name": "Kanvas Putih Modular",
+  "description": "NFT kanvas putih yang bisa diisi dan berinteraksi secara dinamis.",
+  "image": "ipfs://Qm...Putih.png",
+  "external_url": "https://your-nft-viewer.vercel.app/kanvas/123",
+  "attributes": [
+    {"trait_type": "Data Aktif", "value": "https://docs.google.com/spreadsheets/d/xxxxxx"},
+    {"trait_type": "Tinta", "value": "ipfs://Qm.../logic.json"},
+    {"trait_type": "Alat Tulis", "value": "ipfs://Qm.../drawlogic.js"},
+    {"trait_type": "Goresan", "value": "ipfs://Qm.../template.html"},
+    {"trait_type": "Interaktif", "value": "0x...AddressSmartContract"}
+  ],
+  "properties": {
+    "google_sheet_live": "https://docs.google.com/spreadsheets/d/xxxxxx",
+    "custom_js": "ipfs://Qm.../drawlogic.js",
+    "custom_html": "ipfs://Qm.../template.html",
+    "logic_json": {
+      "pen": "ipfs://Qm.../drawlogic.js",
+      "stroke": "ipfs://Qm.../template.html"
+    },
+    "main_contract": "0x...AddressSmartContract",
+    "chat_box": {
+      "enabled": true,
+      "onInput": "callSmartContract"
+    }
+  }
+}
+
