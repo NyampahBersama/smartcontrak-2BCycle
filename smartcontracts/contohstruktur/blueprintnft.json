@@ -1,0 +1,22 @@
+{
+  "name": "Kanvas Putih Modular",
+  "description": "NFT eksperimental: kanvas interaktif, chatbox & pencatatan abadi di blockchain.",
+  "image": "ipfs://Qm...white-canvas.png",
+  "external_url": "https://nftmodular.vercel.app/viewer/0", 
+  "attributes": [
+    {"trait_type": "Data Aktif", "value": "https://docs.google.com/spreadsheets/d/xxxxxx"},
+    {"trait_type": "Alat Tulis", "value": "ipfs://Qm...logic.js"},
+    {"trait_type": "Goresan", "value": "ipfs://Qm...template.html"},
+    {"trait_type": "Interaktif", "value": "0x...SmartContractAddress"}
+  ],
+  "properties": {
+    "google_sheet_live": "https://docs.google.com/spreadsheets/d/xxxxxx",
+    "custom_js": "ipfs://Qm...logic.js",
+    "custom_html": "ipfs://Qm...template.html",
+    "main_contract": "0x...SmartContractAddress",
+    "chat_box": {
+      "enabled": true,
+      "onInput": "addMessage"
+    }
+  }
+}
