@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>CCUS Market: Kalkulator & Leaderboard</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+  <style>
+    body {font-family:sans-serif; max-width:520px; margin:36px auto; background:#f3f5fa;}
+    h2 {margin-bottom:8px;}
+    .section {background:#fff; border-radius:12px; padding:21px; box-shadow:0 2px 8px #0001; margin-bottom:20px;}
+    .input-row {margin-bottom:10px;}
+    label {font-weight:600;}
+    .btn {background:#2278ec; color:#fff; border:none; border-radius:7px; padding:8px 22px; font-size:1.12em; font-weight:600; cursor:pointer;}
+    .btn[disabled]{opacity:.7;}
+    #notif {color:#c33; margin-top:7px;}
+    #leaderboardTbl td, #leaderboardTbl th {padding:6px 10px;}
+    #leaderboardTbl th {background:#efefef;}
+  </style>
+</head>
+<body>
+  <h2>Carbon Capture/Utilization/Storage Panel</h2>
+  <div class="section">
+    <b>Daftar Aksi CCUS Anda:</b>
+    <div class="input-row">
+      <label>
+        Aksi:
+        <select id="actType">
+          <option value="0">Captured</option>
+          <option value="1">Utilized</option>
+          <option value="2">Stored</option>
+        </select>
+      </label>
+    </div>
+    <div class="input-row">
+      <label>Jumlah (ton CO₂): <input id="inputAmt" type="number" min="0.01" step="0.01" style="width:80px;padding:5px;" /></label>
+    </div>
+    <div class="input-row">
+      <label>Bukti (CID/link laporan/IPFS):<br>
+        <input id="inputCid" type="text" placeholder="ipfs://..." style="width:95%;padding:5px;">
+      </label>
+    </div>
+    <button class="btn" onclick="submitEntry()" id="btnSubmit">Daftar CCUS</button>
+    <div id="notif"></div>
+  </div>
+  <div class="section" id="myRecap">
+    <b>Total Progress Karbon Anda:</b>
+    <div id="stats"></div>
+    <button class="btn" style="margin-top:9px;" onclick="loadMy()">Refresh</button>
+  </div>
+  <div class="section">
+    <b>Leaderboard User (Top 10 Akumulasi CCUS)</b>
+    <table border="0" id="leaderboardTbl" style="width:100%; margin:10px 0;">
+      <thead>
+        <tr>
+          <th>#</th><th>Address</th>
+          <th>Captured</th><th>Utilized</th><th>Stored</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody id="ldrRows"></tbody>
+    </table>
+    <button class="btn" style="margin-top:7px;" onclick="loadLeaderboard()">Refresh Leaderboard</button>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
