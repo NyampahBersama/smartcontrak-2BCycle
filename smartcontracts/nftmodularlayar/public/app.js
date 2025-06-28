@@ -108,6 +108,19 @@ async function addMessage() {
   } catch(e) {
     alert("Gagal kirim: " + (e && e.message));
   }
+  // App.js
+let provider, signer;
+
+if (window.myWalletProvider) {
+   provider = window.myWalletProvider;
+   signer = provider.getSigner();
+} else if (window.ethereum) {
+   provider = new ethers.providers.Web3Provider(window.ethereum);
+   signer = provider.getSigner();
+} else {
+   // fallback: view only
+   provider = ethers.getDefaultProvider();
+  }
 }
 
 // Modular: jika ingin chatbox HTML & JS tertanam dinamis (dari IPFS, bukan hardcoded)
