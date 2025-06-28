@@ -3,6 +3,18 @@ const METADATA_URL = 'https://ipfs.io/ipfs/Qm.../NFT-Metadata.json';   // Link J
 const CONTRACT_ADDRESS = '0x...SmartContractAddress';                  // Kontrak NFT-mu
 const TOKEN_ID = 0;   // Ganti sesuai NFT
 
+// Instead of:
+const provider = new ethers.providers.Web3Provider(window.ethereum);
+
+// Use your own injected provider:
+const provider = window.myWalletProvider // atau sesuai expose-mu
+
+// Untuk signature:
+const signer = provider.getSigner(); // custom, dari in-app wallet!
+
+// Saat call kontrak:
+const contract = new ethers.Contract(CONTRACT_ADDRESS, ABI, signer);
+
 const ABI = [
   "function addMessage(uint256 tokenId, string calldata message) external",
   "function getMessages(uint256 tokenId) view external returns (string[] memory)"
