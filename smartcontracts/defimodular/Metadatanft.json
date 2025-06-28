@@ -1,0 +1,21 @@
+{
+  "name": "DeFi Staking Pool NFT",
+  "description": "NFT modular sebagai receipt, dashboard, & hak pool user.",
+  "image": "ipfs://bafy.../staking-receipt.png",
+  "external_url": "https://your-defi-viewer.vercel.app/pool/123", 
+  "attributes": [
+    {"trait_type": "Staking Amount", "value": "1000 USDC"},
+    {"trait_type": "Since", "value": "2025-06-27"},
+    {"trait_type": "Pool", "value": "ModularDeFi Test Pool"}
+  ],
+  "properties": {
+    "main_contract": "0x...ContractAddress",
+    "google_sheet_live": "https://docs.google.com/spreadsheets/d/xxxxxx",
+    "custom_html": "ipfs://bafy...panel.html",
+    "custom_js": "ipfs://bafy...logic.js",
+    "dashboard": {
+      "withdraw": true,
+      "show_stats": "onchain"
+    }
+  }
+}
