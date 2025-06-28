@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Gabung Ekosistem (OmniGateway)</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+  <style>
+    body { font-family:sans-serif; max-width:410px; margin:36px auto; background:#f8f9fa;}
+    .gw-box {background:#fff; border-radius:11px; padding:20px; margin-bottom:18px; box-shadow:0 4px 16px #0001;}
+    .title {font-size:1.6em; font-weight:700; margin-bottom:7px;}
+    .desc {font-size:1em; color:#444; margin-bottom:14px;}
+    .btn {background:#255dff; color:#fff; border:none; border-radius:9px; padding:10px 23px; font-size:1.18em; font-weight:600; cursor:pointer;}
+    .btn[disabled]{opacity:.7;}
+    #status {margin:19px 0 7px 0; font-size:1.12em;}
+    #errMsg {color:#b11; font-size:0.98em; margin-top:7px;}
+    #idField {margin-bottom:11px;}
+    label{color:#236}
+  </style>
+</head>
+<body>
+  <div class="gw-box">
+    <div class="title">Gabung Komunitas Nyampah</div>
+    <div class="desc">Tekan satu tombol—langsung masuk ke seluruh ekosistem: badge, reward, NFT, registry... tanpa jargon blockchain.</div>
+    <div id="idField">
+      <label for="ident">Kode/email/ID (opsional):</label><br>
+      <input id="ident" type="text" placeholder="Boleh dikosongkan" style="width:85%;padding:7px;font-size:1em;border-radius:6px;border:1px solid #bbb;">
+    </div>
+    <button class="btn" id="btnJoin" onclick="joinGateway()">Gabung Sekarang</button>
+    <div id="status"></div>
+    <div id="errMsg"></div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
