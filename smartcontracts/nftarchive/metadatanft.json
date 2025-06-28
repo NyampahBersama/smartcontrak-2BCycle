@@ -1,0 +1,72 @@
+{
+  "name": "2BCycle Genesis Block Viewer",
+  "description": "Layar Putih Modular – NFT Layer-0 untuk seluruh block, scene, dan logic NFT 2BCycle. NFT ini menjadi root, registry, dan framework layout semua NFT turunan.",
+  "image": "ipfs://bafybeiazgojdslj6gabeljszahwddnqpaz7ugvfn4egwjucoh6vgdkadoy",
+  "animation_url": "https://your-viewer.vercel.app/canvas?root=0xYourNFTv1Contract&tokenId=1",
+  "external_url": "https://2bcycle-archive.xyz/platform/block-viewer",
+  "attributes": [
+    {
+      "trait_type": "Genesis",
+      "value": "True"
+    },
+    {
+      "trait_type": "Layer",
+      "value": "Block Viewer / Canvas"
+    },
+    {
+      "trait_type": "Role",
+      "value": "Platform Root, Parent NFT"
+    },
+    {
+      "trait_type": "Registry URI",
+      "value": "ipfs://Qm.../registry.json"
+    },
+    {
+      "trait_type": "Supported Modular Types",
+      "value": "block, scene, logic, proof, visual, childNFT"
+    }
+  ],
+  "canvas_schema": {
+    "layout": "grid",
+    "columns": 12,
+    "rows": 8,
+    "background": "#ffffff",
+    "border": true,
+    "padding": "32px",
+    "styles": {
+      "borderRadius": "24px",
+      "shadow": "md",
+      "gap": "16px"
+    },
+    "block_types": [
+      "visual-block",
+      "logic-block",
+      "scene-block",
+      "text-block",
+      "child-NFT-block"
+    ]
+  },
+  "logic_registry": [
+    {
+      "type": "childNFT-attachment",
+      "allowed_address": ["*"],
+      "layout_rules": "child NFT only displayed if parent NFT present in wallet"
+    },
+    {
+      "type": "scene-chain",
+      "behavior": "auto-connect scenes by parent-child linkage"
+    },
+    {
+      "type": "custom-logic",
+      "behavior": "any block can define onClick, popup, or animation via attributes"
+    }
+  ],
+  "platform_manifest": {
+    "vision": "NFT v1 ini adalah root-block-kanvas digital: segala NFT modular berikutnya lahir, hidup, dan tampil hanya jika lolos dari root ini.",
+    "governance": "Layout, registry, dan rule block hanya bisa diubah lewat governance by NFT v1 holder.",
+    "extensible": "Siap mendukung block/NFT modular apapun selama comply pada schema & registry-nya."
+  },
+  "created_by": "0x95694d970792Ce94D0cD1b9B67E2A5dFe6fd144F",
+  "version": "v1.0",
+  "timestamp": "2025-06-27T00:25:39Z"
+}
