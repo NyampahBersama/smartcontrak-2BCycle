@@ -108,6 +108,8 @@ async function addMessage() {
   } catch(e) {
     alert("Gagal kirim: " + (e && e.message));
   }
+}
+
   // App.js
 let provider, signer;
 
