@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Marketplace Carbon Credit SBT</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+  <style>
+    body{font-family:sans-serif;max-width:660px;margin:33px auto;background:#f6f7fa;}
+    h2{margin-bottom:7px;} .sect{background:#fff;border-radius:10px;padding:19px 14px;box-shadow:0 2px 11px #0001;margin-bottom:20px;}
+    .btn{background:#2278ec;color:#fff;border:none;border-radius:6px;padding:7px 18px;font-size:1em;font-weight:600;cursor:pointer;}
+    .btn[disabled]{opacity:.6;} #notif{color:#c33;}
+    table{width:100%;margin-top:7px;} th,td{padding:6px 8px;} th{background:#eaf0fb;}
+    code{font-size:95%!important;}
+    .badge{background:#c8f7b3;color:#225721;padding:2px 8px;border-radius:11px;font-weight:700;}
+  </style>
+</head>
+<body>
+  <h2>Carbon Credit NFT Marketplace</h2>
+  <div class="sect">
+    <b>1. List/Sell Carbon Credit NFT (SBT)</b><br>
+    <label>Token ID SBT: <input id="tokenIdList" type="number" min="0" style="width:75px;padding:5px;"/>
+    </label>
+    <label>Harga (USDC): <input id="priceList" type="number" min="0.01" step="0.01" style="width:75px;padding:5px;"/></label>
+    <button class="btn" onclick="listSBT()">List Jual</button>
+    <div id="notifList"></div>
+  </div>
+  <div class="sect">
+    <b>2. Browse & Purchase Credit</b>
+    <table border="0" id="tblMarket"><thead>
+      <tr>
+        <th>TokenID</th><th>Jumlah CO₂</th><th>Seller</th><th>Harga (USDC)</th><th>Action</th>
+      </tr>
+    </thead><tbody id="marketRows"></tbody></table>
+    <button class="btn" onclick="loadMarket()">Refresh Market</button>
+    <div id="notifBuy"></div>
+  </div>
+  <div class="sect">
+    <b>3. Panel Reward & Registry</b>
+    <div id="rewardPanel"></div>
+    <button class="btn" onclick="loadRewardPanel()">Refresh Registry & Progress</button>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
