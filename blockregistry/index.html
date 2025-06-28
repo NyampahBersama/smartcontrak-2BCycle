@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>NFT Archive + Pendaftaran SBT</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+  <style>
+    body {font-family:sans-serif; max-width:520px; margin:38px auto; background:#f5f6fb;}
+    .canvas-box {padding:19px 11px; background:#fff; border-radius:10px; margin-bottom:18px;}
+    .nft-img {width:100%; max-width:410px; border-radius:10px; margin-bottom:14px;}
+    .meta, .history {background:#f3faff; border-radius:7px; margin-bottom:12px; padding:10px;}
+    .panel-sbt {background:#f1f7ed; border-radius:9px; padding:14px 15px; margin-top:10px;}
+    .badge {background:#bee4d3; color:#18562a; padding:3px 12px; border-radius:99px; font-weight:700;}
+    .btn {padding:8px 18px;background:#276df6;color:#fff; border:none; border-radius:6px;cursor:pointer; font-size:1em;}
+    .btn[disabled]{opacity:.6;}
+    #notif {font-size:90%;color:#933; margin-top:6px;}
+  </style>
+</head>
+<body>
+  <h2>NFT BlockViewer + SBT Sertifikat</h2>
+  <div class="canvas-box" id="blockviewer">
+    <label>Token ID: 
+      <input id="tokenId" type="number" min="0" value="0" style="width:66px;"/>
+      <button onclick="loadAll()" class="btn">LOAD</button>
+    </label>
+    <div class="meta" id="meta"></div>
+    <img id="imgNFT" src="" class="nft-img" style="display:none"/>
+    <div class="history" id="history"></div>
+  </div>
+  <div class="panel-sbt" id="panelSBT">
+    <b>Pendaftaran Sertifikat SBT</b><br/>
+    <span id="statusSBT"></span>
+    <div id="notif"></div>
+    <button id="btnDaftar" class="btn" onclick="registerSBT()">Daftar & Mint SBT</button>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
